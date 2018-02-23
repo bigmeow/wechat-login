@@ -35,11 +35,13 @@ Page({
     });
   },
   bindsubmit (event) {
-    console.log(event.detail);
-    let a=util.ajax({
+    //console.log(event.detail);
+    wx.showLoading({
+      title: '请稍等...'
+    });
+    util.ajax({
       url: 'https://baidu.com'
     }).then(res => {
-      console.log('发送成功',res);
       wx.showToast({
         title: '登陆成功',
         success: () => {
@@ -49,7 +51,11 @@ Page({
         }
       });
     }).catch(error => {
-      console.log('发送失败')
+      wx.showToast({
+        title: '用户名密码错误',
+        duration: 2000,
+        icon: 'none'
+      });
     })
     
   }

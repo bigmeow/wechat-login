@@ -16,7 +16,7 @@
           <input data-key="username" name="username" bindinput="bindinput" class="form-control" type="number" placeholder="手机号" maxlength="11" />
         </view>
         <view class="controlls">
-          <input data-key="password" name="password" bindinput="bindinput" bindfocus="bindfocusOnPasswordInput" bindblur="bindblurOnPasswordInput" class="form-control" type="password" placeholder="密码"/>
+          <input data-key="password" name="password" bindinput="bindinput" bindfocus="bindfocusOnPasswordInput" bindblur="bindblurOnPasswordInput" cursor-spacing="80" class="form-control" type="password" placeholder="密码"/>
         </view>
         <view class="controlls">
           <button form-type="submit" disabled="{{!isAllowSubmit}}" loading="{{isSubmitLoading}}" class="btn-login">登陆</button>
