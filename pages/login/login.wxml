@@ -1,0 +1,27 @@
+<view class="login">
+  <view class="wrap">
+    <!--卡通鸟  -->
+    <view class="cartoon-brid {{isFocusPasswordInput ? 'no-see' : ''}}">
+      <image class="bird-head" src="../../images/bird-head.png"></image>
+      <view class="bird-hand"></view>
+      <view class="bird-hand right-hand"></view>
+      <view class="arms">
+          <image class="arm" src="../../images/bird-arm.png"></image>
+          <image class="arm arm-right" src="../../images/bird-arm.png"></image>
+      </view>   
+    </view>
+    <view class="login-form">
+      <form bindsubmit="bindsubmit">
+        <view class="controlls">
+          <input data-key="username" name="username" bindinput="bindinput" class="form-control" type="number" placeholder="手机号" maxlength="11" />
+        </view>
+        <view class="controlls">
+          <input data-key="password" name="password" bindinput="bindinput" bindfocus="bindfocusOnPasswordInput" bindblur="bindblurOnPasswordInput" class="form-control" type="password" placeholder="密码"/>
+        </view>
+        <view class="controlls">
+          <button form-type="submit" disabled="{{!isAllowSubmit}}" loading="{{isSubmitLoading}}" class="btn-login">登陆</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>
